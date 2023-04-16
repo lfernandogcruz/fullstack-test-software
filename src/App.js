@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import QueryProvider from './context/QueryProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>init</p>
-      </header>
-    </div>
+    <QueryProvider>
+      <div className="App">
+        <header className="App-header">
+          <p>init</p>
+        </header>
+      </div>
+    </QueryProvider>
   );
 }
 
