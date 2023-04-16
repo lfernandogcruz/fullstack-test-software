@@ -4,7 +4,7 @@ import QueryContext from './QueryContext';
 
 function QueryProvider({ children }) {
   const [source, setSource] = useState('all');
-  const [category, setCategory] = useState('mobile');
+  const [category, setCategory] = useState('refrigerator');
   const [search, setSearch] = useState('');
   const [content, setContent] = useState([]);
 
