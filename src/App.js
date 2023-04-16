@@ -1,13 +1,12 @@
 import './App.css';
 import QueryProvider from './context/QueryProvider';
+import Header from './components/Header';
 
 function App() {
   return (
     <QueryProvider>
       <div className="App">
-        <header className="App-header">
-          <p>init</p>
-        </header>
+        <Header />
       </div>
     </QueryProvider>
   );
