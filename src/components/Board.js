@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import QueryContext from '../context/QueryContext';
+import ProductCard from './ProductCard';
 
 function Board() {
   const { content } = useContext(QueryContext);
@@ -7,19 +8,8 @@ function Board() {
   return (
     content.length === 0
       ? <p>Nothing to show</p>
-      : content.map((item) => (
-        <div key={item.link}>
-          <p>{item.title}</p>
-          <p>{item.price}</p>
-          <button
-            type="button"
-            onClick={() => {
-              window.open(item.link, "_blank");
-            }}
-          >
-            Ir a web
-          </button>
-        </div>
+      : content.map((item, index) => (
+        <ProductCard data={item} index={index} key={index} />
       ))
   );
 }
