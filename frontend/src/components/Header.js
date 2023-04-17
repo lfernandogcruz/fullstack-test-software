@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import QueryContext from "../context/QueryContext";
+import scrappers from "../utils/functions";
 import Select from "./Select";
 import TextInput from "./TextInput";
 
 function Header() {
-  const { source, category, search } = useContext(QueryContext);
+  const { source, category, search, setContent } = useContext(QueryContext);
 
   return (
     <header className="App-header">
@@ -17,6 +18,7 @@ function Header() {
           console.log("source ->", source);
           console.log("category ->", category);
           console.log("search ->", search);
+          setContent(scrappers[source](category, search));
         }}
       >
         Search
