@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import QueryContext from "../context/QueryContext";
-import scrappers from "../utils/functions";
+import scrappers from "../../../../backend/utils/functions";
 import Select from "./Select";
 import TextInput from "./TextInput";
 
